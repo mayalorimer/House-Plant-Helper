@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS plantadvice_db;
+CREATE DATABASE plantadvice_db;
+
+USE plantadvice_db;
+
 CREATE TABLE user (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
