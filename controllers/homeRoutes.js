@@ -1,13 +1,30 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Post, User } = require('../models');
 
 
 router.get('/', async (req, res) => {
   //TODO: Add code to find all the projects and the associated users and render homepage
+  res.render("homepage");
 });
 
-router.get('/project/:id', async (req, res) => {
- //TODO: Add code to find one of the projects and the associated user and render project
+router.get('/posts', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const posts = postData.map((post) => post.get({ plain:true }));
+    res.render("homepage", {
+      posts,
+    });
+  } catch (err) {
+    res.status(500).json(err); 
+  }
 });
 
 // Use withAuth middleware to prevent access to route
