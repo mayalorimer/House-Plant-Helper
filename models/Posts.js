@@ -19,7 +19,7 @@ Post.init(
       type: DataTypes.STRING,
     },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.BLOB,
       allowNull: false,
     },
     user_id: {
