@@ -1,7 +1,13 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-class Advice extends Model {}
+class Advice extends Model {
+  constructor(advice, user, post) {
+    this.advice = advice;
+    this.user_id = user;
+    this.post_id = post;
+  }
+}
 
 Advice.init(
   {
@@ -18,24 +24,24 @@ Advice.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
     },
     post_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'post',
-          key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: "post",
+        key: "id",
       },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: "post",
   }
 );
 

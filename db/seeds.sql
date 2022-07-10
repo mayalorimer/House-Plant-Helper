@@ -3,9 +3,17 @@ VALUES
 ('bob@bob.com', 'bob_is_cool', 'coolguy123'),
 ('penny@penelope.com', 'plant_mama', 'monsterra22'),
 ('john@doe.com', 'jonnyboy22', 'jd1989'),
-('jane@doe.com', 'houseplant.lover', 'h0useplants'),
+('jane@doe.com', 'houseplant.lover', 'h0useplantqueen'),
 ('frank@frankie.net', 'plants4ever', 'frankielovesplants123');
 
 INSERT INTO post(title, image, description, user)
 VALUES
-('')
+('White fluff on my pothos???', image, "Does anyone know what this white fluff is all over my pothos plant? I thought it was just dust but it's definitely not.", 'plant_mama'),
+('Dying edges on fiddle leaf fig leaves.', image, "I can't figure out what's killing my fiddle leaf fig. I water it all the time, it has enough humidity, and I play music to it, but it seems so unhappy.", 'bob_is_cool'),
+('Pale leaves', image, "What am I doing wrong? My caladium is supposed to be vibrant green and white. In reality, it's pale green (almost yellow), and offwhite.", 'plants4ever'),
+('Mold?!', image, "There is literally yellow mold growing on top of the soil of my Dracaena. What would cause this? Does yellow mean something specific? Help. :(", 'jd1989'),
+('My peace lily looks so sad!', image, "My peace lily's leaves are sooo droopy. Why is she wilting? Is she depressed?", 'h0useplantqueen');
+
+INSERT INTO advice (advice, user, post)
+VALUES
+("It sounds like you have mealybugs! Look closely at the fluff... there are probably little white bugs in it. Depending on the level of the infestation, you will have a couple options. Regardless of the state of your plant, you will need to make a conconction to spray all over you pothos. The make it, you'll need to combine 1 cup of isopropyl alcohol with a few drops of Dawn, and 32 ounces of water. If this infestation is just starting (there is a very light layer of the fluff), you can easily get rid of them by wiping off the areas of fluff with a wet paper towel and then spraying with the mix. Then you can use the spray often for prevention. Alternatively, if the plant has quite a bit of the white fluff, you will need to use q tips and cotton balls and clean out all the areas including inside the stems, THEN spray. Keep doing this until they go away.", 'bob_is_cool', post_id)
