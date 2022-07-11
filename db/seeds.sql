@@ -1,4 +1,4 @@
-/* INSERT INTO user(email, username, password)
+INSERT INTO user(email, username, password)
 VALUES 
 ('bob@bob.com', 'bob_is_cool', 'coolguy123'),
 ('penny@penelope.com', 'plant_mama', 'monsterra22'),
@@ -20,4 +20,4 @@ VALUES
 ("I think you have root rot. If the pot isn't draining like it should, the roots are sitting in stagnant water, which makes the edges of the leaves turn brown like that. Make sure it's in a pot that drains well and that you're not watering it before it dries.", 'jonnyboy22', 2),
 ("To me, it looks like your plant isn't getting enough sunlight. It doesn't look like you have it near a window. I recommend placing it by or in a window. Only water it when the top two inches of soil are dry. If you feel moisture in the soil, leave it be. But putting it in a spot where it can get a good amount of bright sunlight is probably what you need to do.", 'houseplant.lover', 3),
 ("So this could be one of five things: contaminated soil, overwatering, poor light, fertilizer issues, or lack of proper aeration. If you've used organic fertilizer, there's a strong chance your soil is contaminated. You'll need to mix 1.5 teaspoons neem oil, 1 teaspoon mild natural soap, and 1 liter of room temperature water. Spray this over the infected plant, removing it from the sun to completely dry. Spray weekly.", 'plants4ever', 4),
-('Oh nooo, this happened to mine a while bag and I thought I totally killed it. Turned out it just needed to be watered and was being overly dramatic. :) Give it a good water and check out the difference tomorrow.', 'plant_mama', 5) */
+('Oh nooo, this happened to mine a while bag and I thought I totally killed it. Turned out it just needed to be watered and was being overly dramatic. :) Give it a good water and check out the difference tomorrow.', 'plant_mama', 5)
