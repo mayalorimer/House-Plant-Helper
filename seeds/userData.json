@@ -1,28 +1,27 @@
 [
     {
-        "username": "bob_is_cool",
         "email": "bob@bob.com",
+        "username": "bob_is_cool",
         "password": "coolguy123'"
     },
     {
-        "name": "Lernantino",
-        "email": "lernantino@gmail.com",
-        "password": "password12345"
+        "email": "penny@penelope.com",
+        "username": "plant_mama",
+        "password": "monsterra22"
+      },
+      {        
+        "email": "john@doe.com",
+        "username": "jonnyboy22",
+        "password": "jd1989"
       },
       {
-        "name": "Amiko",
-        "email": "amiko2k20@aol.com",
-        "password": "password12345"
+        "email": "jane@doe.com",
+        "username": "houseplant.lover",
+        "password": "h0useplantqueen"
       },
       {
-        "name": "Jordan",
-        "email": "jordan99@msn.com",
-        "password": "password12345"
-      },
-      {
-        "name": "Blake",
-        "email": "the_blake@yahoo.com",
-        "password": "password12345"
+        "email": "frank@frankie.net",
+        "username": "plants4ever",
+        "password": "frankielovesplants123"
       }
 ]
-
