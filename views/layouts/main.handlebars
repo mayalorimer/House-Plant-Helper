@@ -24,17 +24,17 @@
         {{else}}
 
         <a href="/login">login</a>
-        <a href="/signUp">sign </a>
+        <a href="/signUp">sign up</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
-      {{#if logged_in}}
+       {{!-- {{#if logged_in}} --}}
       {{{ body }}}
-      {{else}}
+ {{!--      {{else}}
       {{> loginHome}}
-      {{/if}}
+      {{/if}} --}}
     </main>
   </div>
 
