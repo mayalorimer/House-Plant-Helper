@@ -1,6 +1,13 @@
 <!-- Loop over each object in the projects array -->
-<p>Homepage</p>
-<p>This is where we will loop through the most recent 5 posts</p>
+{{#each posts as |post|}}
+<h2>{{post.title}}</h2>
+<p>{{post.image}}</p>
+<p>{{post.description}}</p>
+
+<p>Created by {{post.user.username}}</p>
+
+
+{{/each}}
 
 {{!-- {{#each projects as |project| }}
 <div class="row mb-4 project">

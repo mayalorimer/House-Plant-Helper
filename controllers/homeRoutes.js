@@ -5,7 +5,23 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   //TODO: Add code to find all the projects and the associated users and render homepage
-  res.render("homepage");
+  try {
+    const postData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    const posts = postData.map((post) => post.get({ plain:true }));
+    res.render("homepage", {
+      posts,
+    });
+  } catch (err) {
+    res.status(500).json(err); 
+  }
 });
 
 router.get('/posts', withAuth, async (req, res) => {
