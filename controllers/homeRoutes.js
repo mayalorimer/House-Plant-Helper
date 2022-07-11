@@ -24,7 +24,27 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/posts', withAuth, async (req, res) => {
+// router.get('/posts', withAuth, async (req, res) => {
+//   try {
+//     const postData = await Post.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['username'],
+//         },
+//       ],
+//     });
+
+//     const posts = postData.map((post) => post.get({ plain:true }));
+//     res.render("homepage", {
+//       posts,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err); 
+//   }
+// });
+
+router.get('/posts', async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
@@ -36,9 +56,10 @@ router.get('/posts', withAuth, async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain:true }));
-    res.render("homepage", {
+    res.render("allposts", {
       posts,
     });
+
   } catch (err) {
     res.status(500).json(err); 
   }
