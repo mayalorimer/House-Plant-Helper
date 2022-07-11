@@ -1,14 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Post extends Model {
-  constructor(title, description, image, user) {
-    this.title = title;
-    this.description = description;
-    this.image = image;
-    this.user_id = user;
-  }
-}
+class Post extends Model {}
 
 Post.init(
   {
