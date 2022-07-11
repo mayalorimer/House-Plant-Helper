@@ -1,4 +1,6 @@
 <!-- Loop over each object in the projects array -->
+{{#if logged_in}}
+{{else}}
 <div class="row">
   <div class="col-md-6">
     <h2>LOGIN</h2>
@@ -21,6 +23,7 @@
     </form>
   </div>
 </div>
+{{/if}}
 
 <script src="./js/login.js"></script>
 
