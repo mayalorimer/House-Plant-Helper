@@ -1,4 +1,3 @@
-addEventListener("click")
 const newFormHandler = async (event) => {
     event.preventDefault();
   
@@ -40,7 +39,7 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('#postBtn')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('click', newFormHandler);
   
 //   document
 //     .querySelector('.project-list')
