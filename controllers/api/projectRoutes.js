@@ -1,6 +1,67 @@
 const router = require('express').Router();
 const { Post, Advice } = require('../../models');
 
+// get post by ID
+router.get('/posts/:id', withAuth, async (req, res) => {
+  try {
+   const postData = await Post.findByPk(req.params.id);
+
+   const post = postData.get({ plain: true });
+  // figure out where to send this data
+   res.render('homepage', {
+    post,
+    logged_in: req.session.logged_in,
+   });
+
+  } catch (err) {
+    res.status(500).json(err); 
+  }
+});
+
+
+// get all advice
+router.get('/', async (req, res) => {
+  try {
+    const adviceData = await Advice.findAll({
+      include: [
+        {
+          model: Post, 
+          attributes: ['title', 'description', 'image'],
+        },
+      ],
+    });
+
+    const advices = adviceData.map((advice) => advice.get({ plain:true }));
+    //figure out where to send this data
+    res.render('homepage', {
+      advices,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err); 
+  }
+});
+
+
+// get by ID
+router.get('/advice/:id', withAuth, async (req, res) => {
+  try {
+   const adviceData = await advice.findByPk(req.params.id);
+
+   const advice = adviceData.get({ plain: true });
+  // figure out where to send this data
+   res.render('homepage', {
+    advice,
+    logged_in: req.session.logged_in,
+   });
+
+  } catch (err) {
+    res.status(500).json(err); 
+  }
+});
+
+
 // post a new post
 router.post('/', async (req, res) => {
   try {
