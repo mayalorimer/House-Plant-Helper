@@ -2,8 +2,8 @@ const router = require('express').Router();
 const { Post, Advice } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get post by ID
-router.get('/posts/:id', withAuth, async (req, res) => {
+// get post by ID /api/posts/:id
+router.get('/:id', withAuth, async (req, res) => {
   try {
    const postData = await Post.findByPk(req.params.id);
 
@@ -20,8 +20,8 @@ router.get('/posts/:id', withAuth, async (req, res) => {
 });
 
 
-// get all advice
-router.get('/', async (req, res) => {
+// get all advice /api/posts/advice
+router.get('/advice', async (req, res) => {
   try {
     const adviceData = await Advice.findAll({
       include: [
@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
 });
 
 
-// get by ID
+// get by ID  /api/posts/advice/:id
 router.get('/advice/:id', withAuth, async (req, res) => {
   try {
    const adviceData = await advice.findByPk(req.params.id);
@@ -63,7 +63,7 @@ router.get('/advice/:id', withAuth, async (req, res) => {
 });
 
 
-// post a new post
+// post a new post api/posts
 router.post('/', async (req, res) => {
   try {
     const newProject = await Post.create({
@@ -79,7 +79,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//create a comment / advice
+//create a comment / advice   /posts/advice
 router.post('/advice', async (req, res) => {
   try {
     const newAdvice = await Advice.create({
