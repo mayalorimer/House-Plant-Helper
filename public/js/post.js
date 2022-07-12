@@ -4,21 +4,21 @@ const newFormHandler = async (event) => {
     const title = document.querySelector('#titleInp').value.trim();
     const description = document.querySelector('#descInp').value.trim();
     console.log(title, description);
-    // if (title && description) {
-    //   const response = await fetch(`/api/posts`, {
-    //     method: 'POST',
-    //     body: JSON.stringify({title, description}),
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   });
+    if (title && description) {
+      const response = await fetch(`/api/posts`, {
+        method: 'POST',
+        body: JSON.stringify({ title, description }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
   
-    //   if (response.ok) {
-    //     document.location.replace('/profile');
-    //   } else {
-    //     alert('Failed to create project');
-    //   }
-    // }
+      if (response.ok) {
+        document.location.replace('/posts');
+      } else {
+        alert('Failed to create project');
+      }
+    }
   };
   
 //   const delButtonHandler = async (event) => {
@@ -39,7 +39,7 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('#postBtn')
-    .addEventListener('click', newFormHandler);
+    .addEventListener('submit', newFormHandler);
   
 //   document
 //     .querySelector('.project-list')

@@ -1,7 +1,26 @@
-<input type="text" name="" id="titleInp">
-<input type="text" name="" id="descInp">
-<p>Image</p>
-<button id="postBtn">Post</button>
+{{!-- <form class="form">
+    <input type="text" name="" id="titleInp">
+    <input type="text" name="" id="descInp">
+    <p>Image</p>
+    <button class="btn" id="postBtn">Post</button>
+</form> --}}
+
+
+
+<div class="card">
+    <h3 class="card-header">Create New Post</h3>
+    <form class="card-body new-post-form" id="new-post-form">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" id="titleInp" name="post-title" class="form-input" />
+
+
+        <label class="form-label" for="content">Description</label>
+        <input id="content" name="content" class="form-input" id="descInp"/>
+
+        <button type="submit" class="btn" id="postBtn">Create</button>
+    </form>
+</div>
+
 
 {{#each posts as |post|}}
 <h2>{{post.title}}</h2>
