@@ -2,11 +2,12 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-
+// displays the homepage and gets the first 5 projects
 router.get('/', async (req, res) => {
   //TODO: Add code to find all the projects and the associated users and render homepage
   try {
     const postData = await Post.findAll({
+      limit: 5,
       include: [
         {
           model: User,
@@ -25,6 +26,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// gets all of the posts once you are logged in
 router.get('/posts', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -47,11 +49,8 @@ router.get('/posts', withAuth, async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/profile', async (req, res) => {
-  //TODO: Add code to find the loggedIn user and their associated projects and render profile
-});
 
+//display the login page
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -62,6 +61,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// display the signup page
 router.get('/signUp', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
