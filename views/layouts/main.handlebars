@@ -5,20 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GREEN GUARDIAN</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+  <div>
+    <header class="navbar">
       <h1 class="homepage-header">
-        <span role="img" aria-label="money">💸</span>
         <a href="/">GREEN GUARDIAN</a>
       </h1>
-      <nav>
+      <nav class="nav-items">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">PROFILE</a> |
@@ -31,10 +30,13 @@
       </nav>
     </header>
     <main class="container container-fluid mt-5">
+
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
   </div>
+
+
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
