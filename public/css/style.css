@@ -8,7 +8,7 @@ body {
   background-image: url("monsterrawall.png");
   background-color: #cccccc;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 .navbar {
@@ -21,25 +21,16 @@ body {
 
 .homepage-header {
   text-align: center;
+  font-weight: 200;
 }
 
 .homepage-header a {
   color: black;
   display: inline;
   text-decoration: none;
-  border: solid black 1px;
+  border: solid black 2px;
   padding: 10px;
 }
-
-.homepage-posts {
-  background-color: rgba(255, 255, 255, 0.782);
-  margin: 10px;
-  padding: 5px;
-}
-
-/* .homepage-header h1 {
-  border: solid black 1px;
-} */
 
 .nav-items {
   display: flex;
@@ -50,9 +41,42 @@ body {
 .nav-items a {
   color: black;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 300;
   margin-left: -5px;
 }
+
+.recents {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.782);
+}
+
+.homepage-posts {
+  background-color: rgba(255, 255, 255, 0.782);
+  margin: 10px;
+  padding: 5px;
+  max-width: 90%;
+}
+
+.row {
+  background-color: rgba(255, 255, 255, 0.782);
+  margin: 10px;
+  padding: 5px;
+  max-width:40%;
+  font-weight: 300;
+}
+
+
+.row h2 {
+  text-align: center;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
 
 
 /* The Modal (background) */
