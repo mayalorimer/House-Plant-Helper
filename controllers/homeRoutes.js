@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 });
 
 // gets all of the posts once you are logged in
-router.get('/posts', withAuth, async (req, res) => {
+router.get('/posts', async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
