@@ -71,15 +71,16 @@ router.get('/advice/:id', withAuth, async (req, res) => {
 
 // post a new post api/posts
 router.post('/', async (req, res) => {
+  console.log(req.body); 
+  console.log(req.session.user_id); 
   try {
-    const newProject = await Post.create({
+    const newPost = await Post.create({
       title: req.body.title,
       description: req.body.description,
-      image: req.body.image,
+      image: "req.body.image",
       user_id: req.session.user_id
     });
-
-    res.status(200).json(newProject);
+    res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);
   }

@@ -3,11 +3,13 @@ const newFormHandler = async (event) => {
   
     const title = document.querySelector('#titleInp').value.trim();
     const description = document.querySelector('#descInp').value.trim();
+
+  //  const image
     console.log(title, description);
     if (title && description) {
       const response = await fetch(`/api/posts`, {
         method: 'POST',
-        body: JSON.stringify({ title, description }),
+        body: JSON.stringify({ title, description, image }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -20,6 +22,7 @@ const newFormHandler = async (event) => {
       }
     }
   };
+
   
 //   const delButtonHandler = async (event) => {
 //     if (event.target.hasAttribute('data-id')) {
@@ -38,7 +41,7 @@ const newFormHandler = async (event) => {
 //   };
   
   document
-    .querySelector('#postBtn')
+    .querySelector('#new-post-form')
     .addEventListener('submit', newFormHandler);
   
 //   document
