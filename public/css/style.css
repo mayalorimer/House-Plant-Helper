@@ -3,6 +3,8 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-image: url("monsterrawall.png");
   background-color: #cccccc;
   background-repeat: no-repeat;
@@ -10,20 +12,34 @@ body {
 }
 
 .navbar {
-  border-bottom: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.782)
+  /* border-bottom: 1px solid black; */
+  background-color: rgba(255, 255, 255, 0.782);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+}
+
+.homepage-header {
+  text-align: center;
 }
 
 .homepage-header a {
   color: black;
+  display: inline;
   text-decoration: none;
-  padding: 18px;
   border: solid black 1px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-content: center;
+  padding: 10px;
 }
+
+.homepage-posts {
+  background-color: rgba(255, 255, 255, 0.782);
+  margin: 10px;
+  padding: 5px;
+}
+
+/* .homepage-header h1 {
+  border: solid black 1px;
+} */
 
 .nav-items {
   display: flex;

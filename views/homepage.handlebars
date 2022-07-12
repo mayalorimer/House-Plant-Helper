@@ -30,11 +30,13 @@
 <script src="./js/login.js"></script>
 
 {{#each posts as |post|}}
-<h2>{{post.title}}</h2>
-<p>{{post.image}}</p>
-<p>{{post.description}}</p>
+<div class="homepage-posts">
+  <h2 class="homepage-posts-titles">{{post.title}}</h2>
+<p class="homepage-posts-images">{{post.image}}</p>
+<p class="homepage-posts-descriptions">{{post.description}}</p>
 
-<p>Created by {{post.user.username}}</p>
+<p class="homepage-posts-users">Created by {{post.user.username}}</p>
+</div>
 {{/each}}
 
 <button id="upload_widget" class="cloudinary-button">UPLOAD PHOTO</button>
