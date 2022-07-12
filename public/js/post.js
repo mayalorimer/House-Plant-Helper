@@ -23,6 +23,24 @@ const newFormHandler = async (event) => {
     }
   };
 
+//   function convertFileToBase64viaFileReader(url, callback){
+//     var xhr = new XMLHttpRequest();
+//     xhr.responseType = 'blob';
+//     xhr.onload = function() {
+//       var reader  = new FileReader();
+//       reader.onloadend = function () {
+//           callback(reader.result);
+//       }
+//       reader.readAsDataURL(xhr.response);
+//     };
+//     xhr.open('GET', url);
+//     xhr.send();
+// };
+// convertFileToBase64viaFileReader('http://bit.ly/18g0VNp', function(base64Img){
+//     // Base64DataURL
+// });
+
+
   
 //   const delButtonHandler = async (event) => {
 //     if (event.target.hasAttribute('data-id')) {
