@@ -14,7 +14,7 @@ const newFormHandler = async (event) => {
           'Content-Type': 'application/json',
         },
       });
-  
+
       if (response.ok) {
         document.location.replace('/posts');
       } else {

@@ -1,15 +1,20 @@
 <!-- Loop over each object in the projects array -->
 {{#if logged_in}}
 <div class="home-card">
-    <h3 class="card-header">Create New Post</h3>
+    <h3 class="card-header">CREATE NEW POST</h3>
     <form class="card-body new-post-form" id="new-post-form">
-        <label for="post-title" class="form-label">Title</label>
+        <label for="post-title" class="form-label">TITLE: </label>
+        <br/>
         <input type="text" id="titleInp" name="post-title" class="form-input" />
-        <label class="form-label" for="content">Description</label>
+        <br/>
+        <label class="form-label" for="content">DESCRIPTION: </label>
+        <br/>
         <input name="content" class="form-input" id="descInp" />
-        <button type="submit" class="btn" id="postBtn">Create</button>
+        <br/>
+        <button id="upload_widget" class="cloudinary-button">UPLOAD PHOTO</button>
+
+        <button type="submit" class="btn" id="postBtn">POST</button>
     </form>
-    <button id="upload_widget" class="cloudinary-button">UPLOAD PHOTO</button>
 </div>
 
 {{else}}
@@ -28,11 +33,13 @@
         <br/>
         <input class="form-input" type="password" id="password-login" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">LOGIN</button>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit"><a href="/signUp">SIGN UP</a></button>
+      <div class="buttons">
+        <div class="form-group">
+          <button class="btn-login" type="submit">LOGIN</button>
+        </div>
+        <div class="form-group">
+          <button class="btn-signup" type="submit"><a href="/signUp">SIGN UP</a></button>
+        </div>
       </div>
     </form>
   </div>
@@ -50,7 +57,7 @@
     <p class="homepage-posts-images">{{post.image}}</p>
     <p class="homepage-posts-descriptions">{{post.description}}</p>
 
-    <p class="homepage-posts-users">Created by {{post.user.username}}</p>
+    <p class="homepage-posts-users"><i>created by: </i> {{post.user.username}}</p>
   </div>
 </div>
 {{/each}}
