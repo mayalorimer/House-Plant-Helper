@@ -1,37 +1,13 @@
-var image; 
-
-document.getElementById("upload_widget").addEventListener(
-  "click",
-  function () {
-    myWidget.open();
-  },
-  false
-);
-
-var myWidget = cloudinary.createUploadWidget(
-  {
-    cloudName: "dtpdctlvq",
-    uploadPreset: "green-guardian",
-  },
-  (error, result) => {
-    if (!error && result && result.event === "success") {
-      console.log("Done! Here is the image info: ", result.info);
-      image = result.info;
-      console.log(image);
-    }
-  }
-);
-
+let image;
 
 const newFormHandler = async (event) => {
+  alert(image);
     event.preventDefault();
   
     const title = document.querySelector('#titleInp').value.trim();
     const description = document.querySelector('#descInp').value.trim();
-    console.log(image);
-  //  const image
-    console.log(title, description);
-    if (title && description) {
+    console.log(title, description, image);
+    if (title && description && image) {
       const response = await fetch(`/api/posts`, {
         method: 'POST',
         body: JSON.stringify({ title, description, image }),
@@ -41,7 +17,7 @@ const newFormHandler = async (event) => {
       });
 
       if (response.ok) {
-        // document.location.replace('/posts');
+        document.location.replace('/posts');
       } else {
         alert('Failed to create project');
       }
@@ -72,7 +48,7 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('#new-post-form')
-    .addEventListener('submit', newFormHandler(myWidget));
+    .addEventListener('submit', newFormHandler);
 
 //   const delButtonHandler = async (event) => {
 //     if (event.target.hasAttribute('data-id')) {

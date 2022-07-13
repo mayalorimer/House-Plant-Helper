@@ -77,7 +77,7 @@ router.post('/', async (req, res) => {
     const newPost = await Post.create({
       title: req.body.title,
       description: req.body.description,
-      image: "req.body.image",
+      image: req.body.image,
       user_id: req.session.user_id
     });
     res.status(200).json(newPost);
