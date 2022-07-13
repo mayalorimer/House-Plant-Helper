@@ -1,11 +1,34 @@
-let image;
+var image; 
+
+document.getElementById("upload_widget").addEventListener(
+  "click",
+  function () {
+    myWidget.open();
+  },
+  false
+);
+
+var myWidget = cloudinary.createUploadWidget(
+  {
+    cloudName: "dtpdctlvq",
+    uploadPreset: "green-guardian",
+  },
+  (error, result) => {
+    if (!error && result && result.event === "success") {
+      console.log("Done! Here is the image info: ", result.info);
+      image = result.info;
+      console.log(image);
+    }
+  }
+);
+
 
 const newFormHandler = async (event) => {
     event.preventDefault();
   
     const title = document.querySelector('#titleInp').value.trim();
     const description = document.querySelector('#descInp').value.trim();
-
+    console.log(image);
   //  const image
     console.log(title, description);
     if (title && description) {
@@ -49,7 +72,7 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('#new-post-form')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('submit', newFormHandler(myWidget));
 
 //   const delButtonHandler = async (event) => {
 //     if (event.target.hasAttribute('data-id')) {
@@ -72,3 +95,6 @@ const newFormHandler = async (event) => {
 //     .addEventListener('click', delButtonHandler);
   
 // post request to post route 
+
+
+

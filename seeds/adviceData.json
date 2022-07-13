@@ -1,0 +1,27 @@
+[
+    {
+        "advice": "I think the white fluff is mold",
+        "user_id": 3,
+        "post_id": 1
+    },
+    {
+        "advice": "Try adding more water",
+        "user_id": 1,
+        "post_id": 2
+    },
+    {
+        "advice": "You may be over watering",
+        "user_id": 2,
+        "post_id": 3
+    },
+    {
+        "advice": "Check for root rot",
+        "user_id": 5,
+        "post_id": 4
+    },
+    {
+        "advice": "I agree with that",
+        "user_id": 3,
+        "post_id": 2
+    }
+]
