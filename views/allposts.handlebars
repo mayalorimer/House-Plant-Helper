@@ -30,8 +30,10 @@
     <p class="homepage-posts-descriptions">{{post.description}}</p>
     <p class="homepage-posts-users"><i>created by: </i> {{post.user.username}}</p>
     <h4>Advice:</h4>
-    <p>{{post.advice.advice}}</p>
-    {{log advice.advice}}
+    {{#each post.advice}}
+    <p>{{advice}}</p>
+    {{/each}}
+    {{log post}}
 
   </div>
 </div>
