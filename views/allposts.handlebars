@@ -18,7 +18,7 @@
 </div>
 
 
-<h3 class="recents">RECENT POSTS</h3>
+<h3 class="recents">ALL POSTS</h3>
 
 <script src="./js/login.js"></script>
 
@@ -28,10 +28,14 @@
     <h2 class="homepage-posts-titles">{{post.title}}</h2>
     <p class="homepage-posts-images">{{post.image}}</p>
     <p class="homepage-posts-descriptions">{{post.description}}</p>
-
     <p class="homepage-posts-users"><i>created by: </i> {{post.user.username}}</p>
+    <h4>Advice:</h4>
+    <p>{{post.advice.advice}}</p>
+    {{log advice.advice}}
+
   </div>
 </div>
+
 {{/each}}
 
 <script src="./js/post.js"></script>
