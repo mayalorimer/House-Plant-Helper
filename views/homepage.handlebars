@@ -14,16 +14,18 @@
 
 {{else}}
 <div class="row">
-  <div class="col-md-6">
+  <div class="login-form-container">
     <h2>LOGIN</h2>
 
     <form class="form login-form">
       <div class="form-group">
         <label for="email-login">EMAIL:</label>
+        <br/>
         <input class="form-input" type="text" id="email-login" />
       </div>
       <div class="form-group">
         <label for="password-login">PASSWORD:</label>
+        <br/>
         <input class="form-input" type="password" id="password-login" />
       </div>
       <div class="form-group">
@@ -42,12 +44,14 @@
 <script src="./js/login.js"></script>
 
 {{#each posts as |post|}}
-<div class="homepage-posts">
-  <h2 class="homepage-posts-titles">{{post.title}}</h2>
-  <p class="homepage-posts-images">{{post.image}}</p>
-  <p class="homepage-posts-descriptions">{{post.description}}</p>
+<div class="recent-posts">
+  <div class="homepage-posts">
+    <h2 class="homepage-posts-titles">{{post.title}}</h2>
+    <p class="homepage-posts-images">{{post.image}}</p>
+    <p class="homepage-posts-descriptions">{{post.description}}</p>
 
-  <p class="homepage-posts-users">Created by {{post.user.username}}</p>
+    <p class="homepage-posts-users">Created by {{post.user.username}}</p>
+  </div>
 </div>
 {{/each}}
 

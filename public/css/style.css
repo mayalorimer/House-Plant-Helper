@@ -50,6 +50,14 @@ body {
   color: rgba(255, 255, 255, 0.782);
 }
 
+.recent-posts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: stretch;
+}
+
 .homepage-posts {
   background-color: rgba(255, 255, 255, 0.782);
   margin: 20px 0 10px 0;
@@ -59,18 +67,38 @@ body {
 }
 
 .row {
-  background-color: rgba(255, 255, 255, 0.782);
-  margin: 70px;
-  padding: 5px;
-  max-width:40%;
-  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-content: center;
+  align-items: stretch;
 }
 
-.row h2 {
+.login-form-container {
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.782);
+  margin: 50px;
+  padding: 10px 60px 10px 60px;
+  max-width:40%;
+  font-weight: 300;
+  border-radius: 1px;
+}
+
+.login-form-container h2 {
   text-align: center;
   font-weight: 300;
+  padding: -10px;
 }
+
+.form-input {
+  line-height: 1.5;
+  margin: 7px;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
 
 .home-card {
   background-color: rgba(255, 255, 255, 0.782);
