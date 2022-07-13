@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   //TODO: Add code to find all the projects and the associated users and render homepage
   try {
     const postData = await Post.findAll({
-      limit: 5,
+      limit: 2,
       include: [
         {
           model: User,
