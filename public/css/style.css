@@ -41,6 +41,14 @@ body {
   padding-bottom: 5px;
 }
 
+.nav-items button {
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  background-color: transparent;
+  border: none;
+}
+
 .nav-items a {
   color: black;
   text-decoration: none;
@@ -123,7 +131,11 @@ body {
   background-color: rgba(255, 255, 255, 0.782);
 }
 
-
+.home-card .cloudinary-button {
+  background-color: rgba(0, 0, 0, 0.552);
+  border: none; 
+  margin: 10px;
+}
 
 .form-group button {
   background-color: rgba(0, 0, 0, 0.552);
@@ -139,8 +151,9 @@ body {
   border: solid black 1px;
 }
 
-
-
+.home-card .cloudinary-button:hover {
+  background-color: black;
+}
 
 
 /* The Modal (background) */
