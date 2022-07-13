@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("monsterrawall.png");
+  background-image: url("plantroom4.png");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +13,7 @@ body {
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.782);
+  background-color: rgba(255, 255, 255, 0.907);
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
@@ -57,7 +57,7 @@ body {
 
 .recents {
   text-align: center;
-  color: rgba(255, 255, 255, 0.782);
+  color: rgba(255, 255, 255, 0.907);
   min-width: 90%;
   font-weight: 300;
 }
@@ -71,7 +71,7 @@ body {
 }
 
 .homepage-posts {
-  background-color: rgba(255, 255, 255, 0.782);
+  background-color: rgba(255, 255, 255, 0.907);
   margin: 20px 0 10px 0;
   padding: 5px;
   text-align: center;
@@ -88,7 +88,7 @@ body {
 
 .login-form-container {
   align-content: center;
-  background-color: rgba(255, 255, 255, 0.782);
+  background-color: rgba(255, 255, 255, 0.907);
   margin: 50px;
   padding: 10px 60px 10px 60px;
   max-width:50%;
@@ -124,11 +124,11 @@ body {
 .buttons a {
   margin: 10px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.782);
+  color: rgba(255, 255, 255, 0.907);
 }
 
 .home-card {
-  background-color: rgba(255, 255, 255, 0.782);
+  background-color: rgba(255, 255, 255, 0.907);
 }
 
 .home-card .cloudinary-button {
