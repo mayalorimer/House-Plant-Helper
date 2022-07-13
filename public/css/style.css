@@ -12,16 +12,18 @@ body {
 }
 
 .navbar {
-  /* border-bottom: 1px solid black; */
+  /* border-bottom: 2px solid black; */
   background-color: rgba(255, 255, 255, 0.782);
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
+  padding-top: 15px;
 }
 
 .homepage-header {
   text-align: center;
   font-weight: 200;
+  padding: 5px 0 15px 0;
 }
 
 .homepage-header a {
@@ -29,20 +31,20 @@ body {
   display: inline;
   text-decoration: none;
   border: solid black 2px;
-  padding: 10px;
+  padding: 15px 75px 15px 75px;
 }
 
 .nav-items {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 5px;
 }
 
 .nav-items a {
   color: black;
   text-decoration: none;
   font-weight: 300;
-  margin-left: -5px;
 }
 
 .recents {
@@ -93,19 +95,40 @@ body {
 .form-input {
   line-height: 1.5;
   margin: 7px;
-  width: 200px;
+  width: 250px;
   font-family: 'Montserrat', sans-serif;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.buttons button {
+  padding: 7px;
+  margin: 10px;
+}
 
+.buttons a {
+  margin: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.782);
+}
 
 .home-card {
   background-color: rgba(255, 255, 255, 0.782);
 }
 
+.form-group button {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.782);
+}
 
-
+.buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.621);
+}
 
 
 
