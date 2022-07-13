@@ -54,7 +54,6 @@
     <h2 class="homepage-posts-titles">{{post.title}}</h2>
     <img src="{{post.image}}">
     <p class="homepage-posts-descriptions">{{post.description}}</p>
-
     <p class="homepage-posts-users"><i>created by: </i> {{post.user.username}}</p>
       <h4>Advice:</h4>
     {{#each post.advice}}
@@ -62,35 +61,9 @@
     {{/each}}
   </div>
 </div>
-
 {{/each}}
-
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-
 {{#if logged_in}}
 <script src="./js/post.js"></script>
 {{else}}
 {{/if}}
-{{!-- {{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
-</div>
-{{/each}} --}}
