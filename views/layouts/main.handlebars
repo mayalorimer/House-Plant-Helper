@@ -18,12 +18,12 @@
       </h1>
       <nav class="nav-items">
         <!-- Conditionally render login or logout links -->
+        <a href="/">HOME</a>
         {{#if logged_in}}
         <a href="/posts">ALL POSTS</a>
         <button class="logout-button" id="logout">LOGOUT</button>
         {{else}}
 
-        <a href="/">HOME</a>
         <a href="/login">LOGIN</a>
         <a href="/signUp">SIGN UP</a>
         {{/if}}
