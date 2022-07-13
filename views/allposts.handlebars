@@ -1,8 +1,29 @@
 
-{{#each posts as |post|}}
-<h2>{{post.title}}</h2>
-<p>{{post.image}}</p>
-<p>{{post.description}}</p>
+<!-- Loop over each object in the projects array -->
 
-<p>Created by {{post.user.username}}</p>
+
+<h3 class="recents">ALL POSTS</h3>
+
+<script src="./js/login.js"></script>
+
+{{#each posts as |post|}}
+<div class="recent-posts">
+  <div class="homepage-posts">
+    <h2 class="homepage-posts-titles">{{post.title}}</h2>
+    <p class="homepage-posts-images">{{post.image}}</p>
+    <p class="homepage-posts-descriptions">{{post.description}}</p>
+    <p class="homepage-posts-users"><i>created by: </i> {{post.user.username}}</p>
+    <h4>Advice:</h4>
+    {{#each post.advice}}
+    <p>{{advice}}</p>
+    {{/each}}
+    {{log post}}
+
+  </div>
+</div>
+
 {{/each}}
+
+<script src="./js/post.js"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="/js/widget.js"></script>

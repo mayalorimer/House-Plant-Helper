@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Advice } = require('../models');
 const withAuth = require('../utils/auth');
 
 // displays the homepage and gets the first 5 projects
@@ -13,6 +13,14 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+          model: Advice,
+          attributes: ['id', 'advice', 'post_id', 'user_id'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        }
       ],
     });
 
@@ -35,6 +43,14 @@ router.get('/posts', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+          model: Advice,
+          attributes: ['id', 'advice', 'post_id', 'user_id'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        }
       ],
     });
     const posts = postData.map((post) => post.get({ plain:true }));
