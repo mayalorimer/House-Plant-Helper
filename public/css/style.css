@@ -13,6 +13,10 @@ body {
   height: 100vh;
 }
 
+h3 {
+  text-align: center;
+}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.925);
   display: flex;
@@ -88,7 +92,6 @@ body {
 }
 
 .login-form-container {
-  align-content: center;
   background-color: rgba(255, 255, 255, 0.925);
   margin: 50px;
   padding: 10px 60px 10px 60px;
@@ -128,20 +131,44 @@ body {
   color: rgba(255, 255, 255, 0.925);
 }
 
+.new-post-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
+  margin: 50px;
+  padding: 10px 60px 10px 60px;
+}
+
+.new-post-container .form-input {
+  min-width: 95%;
+}
+
 .home-card {
   background-color: rgba(255, 255, 255, 0.925);
+  min-width: 80%;
+  margin: 50px;
+  padding: 10px 60px 10px 60px;
+  max-width:50%;
+  font-weight: 300;
+  border-radius: 1px;
+  align-items: center;
 }
 
-.home-card .cloudinary-button {
-  background-color: rgba(0, 0, 0, 0.552);
-  border: none; 
-  margin: 10px;
-}
-
-.form-group button {
+.form-group button, .new-post-container .buttons button {
   background-color: rgba(0, 0, 0, 0.552);
   color: rgba(255, 255, 255, 0.85);
-  border: none;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: none;
+}
+
+.new-post-container .buttons button {
+  background-color: rgba(0, 0, 0, 0.552);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  border-style: none;
 }
 
 .buttons button:hover {
@@ -155,7 +182,6 @@ body {
 .home-card .cloudinary-button:hover {
   background-color: black;
 }
-
 
 /* The Modal (background) */
 .modal {
