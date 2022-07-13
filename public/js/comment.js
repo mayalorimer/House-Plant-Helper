@@ -5,10 +5,6 @@ btn.addEventListener('click', () => {
     form.style.display = 'block'; 
 })
 
-
-
-
-
 // javascript to recieve and post a new advice
 const newAdviceHandler = async (event) => {
     event.preventDefault();
