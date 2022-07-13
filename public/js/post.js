@@ -1,52 +1,4 @@
-var image; 
-
-document.getElementById("upload_widget").addEventListener(
-  "click",
-  function () {
-    myWidget.open();
-  },
-  false
-);
-
-var myWidget = cloudinary.createUploadWidget(
-  {
-    cloudName: "dtpdctlvq",
-    uploadPreset: "green-guardian",
-  },
-  (error, result) => {
-    if (!error && result && result.event === "success") {
-      console.log("Done! Here is the image info: ", result.info);
-      image = result.info;
-      console.log(image);
-    }
-  }
-);
-
-
-const newFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const title = document.querySelector('#titleInp').value.trim();
-    const description = document.querySelector('#descInp').value.trim();
-    console.log(image);
-  //  const image
-    console.log(title, description);
-    if (title && description) {
-      const response = await fetch(`/api/posts`, {
-        method: 'POST',
-        body: JSON.stringify({ title, description, image }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-
-      if (response.ok) {
-        // document.location.replace('/posts');
-      } else {
-        alert('Failed to create project');
-      }
-    }
-  };
+let image; 
 
   var myWidget = cloudinary.createUploadWidget(
     {
@@ -69,6 +21,29 @@ const newFormHandler = async (event) => {
     false
   );
   
+const newFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const title = document.querySelector('#titleInp').value.trim();
+    const description = document.querySelector('#descInp').value.trim();
+    console.log(image);
+    console.log(title, description, image);
+    if (title && description && image) {
+      const response = await fetch(`/api/posts`, {
+        method: 'POST',
+        body: JSON.stringify({title, description, image}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        document.location.replace('/posts');
+      } else {
+        alert('Failed to create project');
+      }
+    }
+  };
   
   document
     .querySelector('#new-post-form')
