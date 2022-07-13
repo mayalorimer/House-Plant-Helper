@@ -72,7 +72,7 @@ router.get('/advice/:id', withAuth, async (req, res) => {
 // post a new post api/posts
 router.post('/', async (req, res) => {
   console.log(req.body); 
-  console.log(req.session.user_id); 
+  console.log('you made it!'); 
   try {
     const newPost = await Post.create({
       title: req.body.title,

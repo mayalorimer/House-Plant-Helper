@@ -11,10 +11,10 @@
         <br/>
         <input name="content" class="form-input" id="descInp" />
         <br/>
-        <button id="upload_widget" class="cloudinary-button">UPLOAD PHOTO</button>
 
         <button type="submit" class="btn" id="postBtn">POST</button>
     </form>
+        <button id="upload_widget" class="cloudinary-button">UPLOAD PHOTO</button>
 </div>
 
 {{else}}
@@ -64,9 +64,8 @@
 {{log post.advice.id}}
 {{/each}}
 
-<script src="./js/post.js"></script>
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-<script src="/js/widget.js"></script>
+<script src="./js/post.js"></script>
 {{!-- {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
