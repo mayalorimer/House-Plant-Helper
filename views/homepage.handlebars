@@ -1,5 +1,17 @@
 <!-- Loop over each object in the projects array -->
 {{#if logged_in}}
+<div class="home-card">
+    <h3 class="card-header">Create New Post</h3>
+    <form class="card-body new-post-form" id="new-post-form">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" id="titleInp" name="post-title" class="form-input" />
+        <label class="form-label" for="content">Description</label>
+        <input name="content" class="form-input" id="descInp" />
+        <button type="submit" class="btn" id="postBtn">Create</button>
+    </form>
+    <button id="upload_widget" class="cloudinary-button">UPLOAD PHOTO</button>
+</div>
+
 {{else}}
 <div class="row">
   <div class="col-md-6">
@@ -39,6 +51,7 @@
 </div>
 {{/each}}
 
+<script src="./js/post.js"></script>
 {{!-- {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
