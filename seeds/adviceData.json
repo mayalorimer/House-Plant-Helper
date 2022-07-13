@@ -1,27 +1,27 @@
 [
     {
-        "advice": "I think the white fluff is mold",
-        "user_id": 3,
+        "advice": "It sounds like you have mealybugs! Look closely at the fluff... there are probably little white bugs in it. Depending on the level of the infestation, you will have a couple options. Regardless of the state of your plant, you will need to make a conconction to spray all over you pothos. The make it, you'll need to combine 1 cup of isopropyl alcohol with a few drops of Dawn, and 32 ounces of water. If this infestation is just starting (there is a very light layer of the fluff), you can easily get rid of them by wiping off the areas of fluff with a wet paper towel and then spraying with the mix. Then you can use the spray often for prevention. Alternatively, if the plant has quite a bit of the white fluff, you will need to use q tips and cotton balls and clean out all the areas including inside the stems, THEN spray. Keep doing this until they go away.",
+        "user_id": 2,
         "post_id": 1
     },
     {
-        "advice": "Try adding more water",
+        "advice": "I think you have root rot. If the pot isn't draining like it should, the roots are sitting in stagnant water, which makes the edges of the leaves turn brown like that. Make sure it's in a pot that drains well and that you're not watering it before it dries.",
         "user_id": 1,
         "post_id": 2
     },
     {
-        "advice": "You may be over watering",
-        "user_id": 2,
+        "advice": "To me, it looks like your plant isn't getting enough sunlight. It doesn't look like you have it near a window. I recommend placing it by or in a window. Only water it when the top two inches of soil are dry. If you feel moisture in the soil, leave it be. But putting it in a spot where it can get a good amount of bright sunlight is probably what you need to do.",
+        "user_id": 5,
         "post_id": 3
     },
     {
-        "advice": "Check for root rot",
-        "user_id": 5,
+        "advice": "So this could be one of five things: contaminated soil, overwatering, poor light, fertilizer issues, or lack of proper aeration. If you've used organic fertilizer, there's a strong chance your soil is contaminated. You'll need to mix 1.5 teaspoons neem oil, 1 teaspoon mild natural soap, and 1 liter of room temperature water. Spray this over the infected plant, removing it from the sun to completely dry. Spray weekly.",
+        "user_id": 3,
         "post_id": 4
     },
     {
-        "advice": "I agree with that",
-        "user_id": 3,
-        "post_id": 2
+        "advice": "Oh nooo, this happened to mine a while bag and I thought I totally killed it. Turned out it just needed to be watered and was being overly dramatic. :) Give it a good water and check out the difference tomorrow.",
+        "user_id": 4,
+        "post_id": 5
     }
 ]
