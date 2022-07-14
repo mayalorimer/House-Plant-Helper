@@ -2,31 +2,31 @@
     {
         "title": "White fluff on my pothos???",
         "description": "Does anyone know what this white fluff is all over my pothos plant? I thought it was just dust but it's definitely not.",
-        "image": "image", 
+        "image": "https://res.cloudinary.com/dtpdctlvq/image/upload/v1657746935/drqfq3vhbra8jpi0xf7y.jpg", 
         "user_id": 2
     },
     {
         "title": "Dying edges on fiddle leaf fig leaves.",
         "description": "I can't figure out what's killing my fiddle leaf fig. I water it all the time, it has enough humidity, and I play music to it, but it seems so unhappy.",
-        "image": , 
+        "image": "https://res.cloudinary.com/dtpdctlvq/image/upload/v1657746935/m5nf4qpooovb78ptspjr.jpg", 
         "user_id": 1
     },
     {
         "title": "Pale leaves",
         "description": "What am I doing wrong? My caladium is supposed to be vibrant green and white. In reality, it's pale green (almost yellow), and offwhite.",
-        "image": "image",
+        "image": "https://res.cloudinary.com/dtpdctlvq/image/upload/v1657746935/dybatr0kpaceydmctcn5.jpg",
         "user_id": 5
     },
     {
         "title": "Mold?",
         "description": "There is literally yellow mold growing on top of the soil of my Dracaena. What would cause this? Does yellow mean something specific? Help. :(",
-        "image": "image",
+        "image": "https://res.cloudinary.com/dtpdctlvq/image/upload/v1657746935/yvpgfewjmumhdtnglyjh.jpg",
         "user_id": 3
     },
     {
         "title": "My peace lily look so sad!",
         "description": "My peace lily's leaves are sooo droopy. Why is she wilting? Is she depressed?",
-        "image": "image",
+        "image": "https://res.cloudinary.com/dtpdctlvq/image/upload/v1657746935/wzstdqhacsxwuuuzxkox.jpg",
         "user_id": 4
     }
 ]

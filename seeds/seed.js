@@ -14,8 +14,8 @@ const seedDatabase = async () => {
   });
 
   await Post.bulkCreate(postData, {
-    individualHooks: true,
-    returning: true,
+  //  individualHooks: true,
+  //  returning: true,
   });
 
   await Advice.bulkCreate(adviceData, {

@@ -3,11 +3,13 @@
 {{#each posts as |post|}}
 <div class="recent-posts">
   <div class="homepage-posts">
-    <h2 class="homepage-posts-titles">{{post.title}}</h2>
+    <h2 class="qs-and-as">SUBJECT:</h2>
+    <p class="title">{{post.title}}</p>
     <img src="{{post.image}}">
+    <h2 class="qs-and-as">QUESTION:</h2>
     <p class="homepage-posts-descriptions">{{post.description}}</p>
-    <p class="homepage-posts-users"><i>created by: </i> {{post.user.username}}</p>
-    <h4>Advice:</h4>
+    <p class="homepage-posts-users"><i>CREATED BY: </i> {{post.user.username}}</p>
+    <h4>ADVICE:</h4>
     {{#each post.advice}}
     <p>{{advice}}</p>
     {{/each}}
