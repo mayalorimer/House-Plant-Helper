@@ -14,6 +14,12 @@ body {
   height: 100vh;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h3 {
   text-align: center;
 }
@@ -102,7 +108,7 @@ h3 {
   font-weight: 600;
 }
 
-.row {
+.row-home {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -120,7 +126,7 @@ h3 {
   border-radius: 1px;
 }
 
-.login-page-form {
+.login-page-form, .sign-up-form {
   background-color: rgba(255, 255, 255, 0.925);
   display: flex;
   flex-direction: column;
@@ -132,7 +138,7 @@ h3 {
   max-width: 40%;
 }
 
-.login-form-container h2, .login-page-form h2 {
+.login-form-container h2, .login-page-form h2, .sign-up-form h2 {
   text-align: center;
   font-weight: 300;
   padding: -10px;
@@ -141,7 +147,7 @@ h3 {
 .form-input {
   line-height: 1.5;
   margin: 7px;
-  width: 250px;
+  width: 200px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -169,7 +175,7 @@ h3 {
   flex-wrap: wrap;
   align-content: center;
   align-items: stretch;
-  margin-top: 250px;
+  margin-top: 80px;
   padding: 10px 60px 10px 60px;
 }
 
