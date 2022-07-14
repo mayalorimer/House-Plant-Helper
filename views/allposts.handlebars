@@ -1,12 +1,12 @@
 <!-- Loop over each object in the projects array -->
-<h3 class="recents">ALL POSTS</h3>
+<h3 class="recents-all">ALL POSTS</h3>
 {{#each posts as |post|}}
 <div class="recent-posts">
   <div class="homepage-posts">
     <h2 class="qs-and-as">SUBJECT:</h2>
     <p class="title">{{post.title}}</p>
     <img src="{{post.image}}">
-    <h2 class="qs-and-as">QUESTION:</h2>
+    <h2 class="qs-and-as">DESCRIPTION:</h2>
     <p class="homepage-posts-descriptions">{{post.description}}</p>
     <p class="homepage-posts-users"><i>CREATED BY: </i> {{post.user.username}}</p>
     <h4>ADVICE:</h4>
@@ -16,6 +16,7 @@
     {{log post}}
     <div id="addAdviceDiv">
     <input type="text" id="adviceInp">
+    <br/>
     <button id="addAdvice">GIVE ADVICE</button>
     </div>
   </div>
