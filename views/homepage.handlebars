@@ -20,6 +20,7 @@
       </form>
   </div>
 </div>
+<h3 class="recents">RECENT POSTS</h3>
 {{else}}
 <div class="row-home">
   <div class="login-form-container">
@@ -58,7 +59,7 @@
     <p class="title">{{post.title}}</p>
     <img src="{{post.image}}">
     <p class="homepage-posts-descriptions">{{post.description}}</p>
-    <p class="homepage-posts-users"><i>CREATED BY:</i>{{post.user.username}}</p>
+    <p class="homepage-posts-users"><i>CREATED BY:</i> {{post.user.username}}</p>
       <h4 class="qs-and-as">ADVICE:</h4>
     {{#each post.advice}}
     <p>{{advice}}</p>
