@@ -1,26 +1,30 @@
-
 const submitAdvice = async (event) => {
-    event.preventDefault();
-    const advice = document.querySelector('#adviceInp').value.trim();
-    const id=event.target.dataset.id;
-    console.log(id);
-    if (advice && id) {
-        const response = await fetch(`/api/posts/:${id}`, {
-          method: 'POST',
-          body: JSON.stringify({advice}),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+  event.preventDefault();
   
-        if (response.ok) {
-          document.location.replace('/posts');
-        } else {
-          alert('Failed to create project');
-        }
-      }
+  console.log("hello");
+  
+  const id = event.target.dataset.id;
+  console.log(id);
+  const advice = document.querySelector(`#adviceInp${id}`).value.trim();
+  console.log(advice);
+  if (id) {
+    const response = await fetch(`/api/posts/${id}`, {
+      method: 'POST',
+      body: JSON.stringify({ advice }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/posts');
+    } else {
+      alert('Failed to create project');
+    }
+  }
 }
 
-document
-  .querySelector('#addAdvice')
-  .addEventListener('click', submitAdvice);
+const btns = document.querySelectorAll('.adviceBtn');
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', submitAdvice)
+};

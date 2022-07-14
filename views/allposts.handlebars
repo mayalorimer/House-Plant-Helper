@@ -15,9 +15,9 @@
     {{/each}}
     {{log post}}
     <div id="addAdviceDiv">
-    <input type="text" id="adviceInp">
+    <input type="text" id="adviceInp{{post.id}}">
     <br/>
-    <button id="addAdvice">GIVE ADVICE</button>
+    <button data-id={{post.id}} id="addAdvice{{post.id}}" class="adviceBtn" >GIVE ADVICE</button>
     </div>
   </div>
 </div>

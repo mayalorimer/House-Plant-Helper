@@ -11,17 +11,17 @@ const withAuth = require('../../utils/auth');
 // get post by ID /api/posts/:id
 router.get('/:id', withAuth, async (req, res) => {
   try {
-   const postData = await Post.findByPk(req.params.id);
+    const postData = await Post.findByPk(req.params.id);
 
-   const post = postData.get({ plain: true });
-  // figure out where to send this data
-   res.render('homepage', {
-    post,
-    logged_in: req.session.logged_in,
-   });
+    const post = postData.get({ plain: true });
+    // figure out where to send this data
+    res.render('homepage', {
+      post,
+      logged_in: req.session.logged_in,
+    });
 
   } catch (err) {
-    res.status(500).json(err); 
+    res.status(500).json(err);
   }
 });
 
@@ -32,13 +32,13 @@ router.get('/advice', async (req, res) => {
     const adviceData = await Advice.findAll({
       include: [
         {
-          model: Post, 
+          model: Post,
           attributes: ['title', 'description', 'image'],
         },
       ],
     });
 
-    const advices = adviceData.map((advice) => advice.get({ plain:true }));
+    const advices = adviceData.map((advice) => advice.get({ plain: true }));
     //figure out where to send this data
     res.render('homepage', {
       advices,
@@ -46,7 +46,7 @@ router.get('/advice', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err); 
+    res.status(500).json(err);
   }
 });
 
@@ -54,25 +54,25 @@ router.get('/advice', async (req, res) => {
 // get by ID  /api/posts/advice/:id
 router.get('/advice/:id', withAuth, async (req, res) => {
   try {
-   const adviceData = await advice.findByPk(req.params.id);
+    const adviceData = await advice.findByPk(req.params.id);
 
-   const advice = adviceData.get({ plain: true });
-  // figure out where to send this data
-   res.render('homepage', {
-    advice,
-    logged_in: req.session.logged_in,
-   });
+    const advice = adviceData.get({ plain: true });
+    // figure out where to send this data
+    res.render('homepage', {
+      advice,
+      logged_in: req.session.logged_in,
+    });
 
   } catch (err) {
-    res.status(500).json(err); 
+    res.status(500).json(err);
   }
 });
 
 
 // post a new post api/posts
 router.post('/', async (req, res) => {
-  console.log(req.body); 
-  console.log('you made it!'); 
+  console.log(req.body);
+  console.log('you made it!');
   try {
     const newPost = await Post.create({
       title: req.body.title,
@@ -90,7 +90,7 @@ router.post('/', async (req, res) => {
 router.post('/advice', async (req, res) => {
   try {
     const newAdvice = await Advice.create({
-      advice: req.body.advice, 
+      advice: req.body.advice,
       user_id: req.session.user_id,
       post_id: req.body.post_id
     });
@@ -101,5 +101,17 @@ router.post('/advice', async (req, res) => {
   }
 });
 
+router.post('/:id', async (req, res) => {
+  try {
+    const newAdvice = await Advice.create({
+      advice: req.body.advice,
+      user_id: req.session.user_id,
+      post_id: req.params.id,
+    });
+    res.status(200).json(newAdvice);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
 
 module.exports = router;
