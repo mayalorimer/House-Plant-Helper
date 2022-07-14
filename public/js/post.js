@@ -1,9 +1,7 @@
 let image;
 
 const newFormHandler = async (event) => {
-  alert(image);
     event.preventDefault();
-  
     const title = document.querySelector('#titleInp').value.trim();
     const description = document.querySelector('#descInp').value.trim();
     console.log(title, description, image);
