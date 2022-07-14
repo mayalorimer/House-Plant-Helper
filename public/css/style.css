@@ -26,6 +26,10 @@ h3 {
   font-weight: 400;
 }
 
+.row-signup, .row-login, .row-home  {
+  min-width: 60%;
+}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.925);
   display: flex;
@@ -111,24 +115,16 @@ h3 {
   font-weight: 600;
 }
 
-.row-home {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: stretch;
-  max-width: 80%;
-}
-
 .login-form-container {
   background-color: rgba(255, 255, 255, 0.925);
   margin: 50px;
-  padding: 10px 60px 10px 60px;
+  padding: 10px 0px 10px 0px;
   margin-top: 80px;
   font-weight: 300;
   border-radius: 1px;
   text-align: center;
 }
+
 
 .login-page-form, .sign-up-form {
   background-color: rgba(255, 255, 255, 0.925);
@@ -142,7 +138,7 @@ h3 {
   width: 50%;
 }
 
-.login-page-form .form-group, .sign-up-form .su-form {
+.login-page-form, .sign-up-form .su-form {
   text-align: center;
 }
 
@@ -153,11 +149,10 @@ h3 {
 }
 
 .form-input {
-  line-height: 1.5;
   margin: 7px;
-  width: 200px;
   font-family: 'Montserrat', sans-serif;
-  max-width: 90%;
+  min-width: 60%;
+  text-align: center;
 }
 
 .buttons {
@@ -185,16 +180,16 @@ h3 {
   align-content: center;
   align-items: stretch;
   margin-top: 80px;
-  padding: 10px 60px 10px 60px;
+  min-width: 70%;
 }
 
 .new-post-container .form-input {
   min-width: 95%;
+  overflow-y: auto;
 }
 
 .home-card {
   background-color: rgba(255, 255, 255, 0.925);
-
   padding: 10px 60px 10px 60px;
   min-width: 70%;
   font-weight: 300;
