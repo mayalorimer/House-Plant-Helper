@@ -22,6 +22,7 @@ main {
 
 h3 {
   text-align: center;
+  font-weight: 400;
 }
 
 .navbar {
@@ -53,24 +54,25 @@ h3 {
   padding-bottom: 5px;
 }
 
-.nav-items button {
+.nav-items a, .logout-button {
   color: black;
   text-decoration: none;
   font-weight: 300;
-  background-color: transparent;
+}
+
+.logout-button {
+  text-decoration: none;
   border: none;
+  background: none;
+  font-size: 16px
 }
 
-.nav-items a {
-  color: black;
-  text-decoration: none;
-  font-weight: 300;
-}
-
-.recents {
+.recents-header h3, .recents-all {
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 60px
 }
 
 .recent-posts {
@@ -138,6 +140,10 @@ h3 {
   max-width: 40%;
 }
 
+.login-page-form .form-group, .sign-up-form .su-form {
+  text-align: center;
+}
+
 .login-form-container h2, .login-page-form h2, .sign-up-form h2 {
   text-align: center;
   font-weight: 300;
@@ -202,20 +208,27 @@ h3 {
   box-shadow: none;
 }
 
-.new-post-container .buttons button {
+.new-post-container .buttons button, #addAdvice {
   background-color: rgba(0, 0, 0, 0.552);
   color: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
   border-style: none;
 }
 
-.buttons button:hover {
+#upload_widget:hover, #postBtn:hover, #addAdvice:hover {
   background-color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
-.nav-items a:hover {
+.nav-items a:hover, .logout-button:hover {
   text-shadow: 4px 4px 4px #888888;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: black;
+  cursor: pointer;
 }
 
 .home-card .cloudinary-button:hover {
@@ -260,3 +273,32 @@ h3 {
   text-decoration: none;
   cursor: pointer;
 }
+
+#modalBtnSU, .login-page-btn {
+  background-color: rgba(0, 0, 0, 0.552);
+  color: rgba(255, 255, 255, 0.925);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#modalBtnSU:hover, .login-page-btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+#adviceInp {
+  width: 50%;
+  height: 100px;
+  margin: 10px;
+}
+
+#addAdvice {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#descInp {
+  height: 100px;
+}
+
