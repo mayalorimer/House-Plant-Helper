@@ -2,7 +2,7 @@
 const submitAdvice = async (event) => {
     event.preventDefault();
     const advice = document.querySelector('#adviceInp').value.trim();
-    const id=event.target.parentElement.parentElement.dataset.id;
+    const id=event.target.dataset.id;
     console.log(id);
     if (advice && id) {
         const response = await fetch(`/api/posts/:${id}`, {
