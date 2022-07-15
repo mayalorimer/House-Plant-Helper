@@ -24,12 +24,13 @@ Start the server:
 - Express
 
 ## Links
-Github Repo: https://github.com/mayalorimer/House-Plant-Helper
-Heroku deployed: 
+- Github Repo: https://github.com/mayalorimer/House-Plant-Helper
+- Heroku deployed: https://desolate-anchorage-75648.herokuapp.com/
 
 ## Screenshots 
-![screenshot of deployed application](./public/images/deploy1.jpg)
-![screenshot of deployed application](./public/images/deploy2.jpg)
+![img](./public/images/homepage-sample-1.png)
+![img](./public/images/homepage-sample-2.png)
+![img](./public/images/post-sample.png)
 
 ## License
 MIT License

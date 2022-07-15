@@ -24,6 +24,41 @@ main {
 h3 {
   text-align: center;
   font-weight: 400;
+  align-items: center;
+}
+
+p {
+  padding: 0px 100px 0 100px;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.925);
+  width: 100vw;
+  padding: 10px;
+  position: relative;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+footer h4 {
+  font-weight: 300;
+  text-align: center;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 
 .row-signup, .row-login, .row-home  {
@@ -34,13 +69,13 @@ h3 {
   background-color: rgba(255, 255, 255, 0.925);
   display: flex;
   flex-direction: column;
-  padding: 15px 0px 15px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .homepage-header {
   text-align: center;
   font-weight: 200;
-  padding: 5px 0 15px 0px;
+  padding: 5px 0 5px 0px;
 }
 
 .homepage-header a {
@@ -77,7 +112,8 @@ h3 {
   color: rgb(255, 255, 255);
   font-weight: 400;
   margin-bottom: 10px;
-  margin-top: 60px
+  margin-top: 60px;
+  text-shadow: 6px 0px 6px rgba(0, 0, 0, 0.542)
 }
 
 .recent-posts {
@@ -86,6 +122,7 @@ h3 {
   flex-direction: column;
   align-content: center;
   align-items: stretch;
+  margin-bottom: 30px;
 }
 
 .homepage-posts {
@@ -236,6 +273,7 @@ h3 {
 .home-card .cloudinary-button:hover {
   background-color: black;
 }
+
 
 /* The Modal (background) */
 .modal {

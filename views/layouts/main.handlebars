@@ -11,37 +11,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <div>
-    <header class="navbar">
-      <h1 class="homepage-header">
-        <a href="/">GREEN GUARDIAN</a>
-      </h1>
-      <nav class="nav-items">
-        <!-- Conditionally render login or logout links -->
-        <a href="/">HOME</a>
-        {{#if logged_in}}
-        <a href="/posts">ALL POSTS</a>
-        <button class="logout-button" id="logout">LOGOUT</button>
-        {{else}}
-        <a href="/login">LOGIN</a>
-        <a href="/signUp">SIGN UP</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
+  <div class="page-container">
+    <div class="content-wrap">
+      <header class="navbar">
+        <h1 class="homepage-header">
+          <a href="/">GREEN GUARDIAN</a>
+        </h1>
+        <nav class="nav-items">
+          <!-- Conditionally render login or logout links -->
+          <a href="/">HOME</a>
+          {{#if logged_in}}
+          <a href="/posts">ALL POSTS</a>
+          <button class="logout-button" id="logout">LOGOUT</button>
+          {{else}}
+          <a href="/login">LOGIN</a>
+          <a href="/signUp">SIGN UP</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main>
+        <!-- Render the sub layout -->
+        {{{ body }}}
+      </main>
+
+
+
+      <!-- Render script for logged in users only -->
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{else}}
+        <script src="./js/login.js"></script>
+      {{/if}}
+    </div>
+    <footer><h4>CREATED WITH LOVE BY PLANT PARENTS ♥</h4></footer>
   </div>
-
-
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{else}}
-    <script src="./js/login.js"></script>
-  {{/if}}
 </body>
 
 </html>
