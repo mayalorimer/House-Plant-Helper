@@ -27,6 +27,10 @@ h3 {
   align-items: center;
 }
 
+p {
+  padding: 0px 100px 0 100px;
+}
+
 footer {
   background-color: rgba(255, 255, 255, 0.925);
   width: 100vw;
@@ -46,20 +50,15 @@ footer h4 {
   min-height: 100vh;
 }
 
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
 .content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;
 }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 2.5rem;
 }
 
 .row-signup, .row-login, .row-home  {
@@ -70,13 +69,13 @@ footer {
   background-color: rgba(255, 255, 255, 0.925);
   display: flex;
   flex-direction: column;
-  padding: 15px 0px 15px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .homepage-header {
   text-align: center;
   font-weight: 200;
-  padding: 5px 0 15px 0px;
+  padding: 5px 0 5px 0px;
 }
 
 .homepage-header a {
